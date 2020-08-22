@@ -11,7 +11,7 @@ With this template, you can simply create infrastructure using Terraform and AWS
 ## How to create the infrastructure?
 This example implies that you have already AWS account, with an S3 act as the remote backend of the tfstate file and Terraform CLI installed.
 1. `https://github.com/dCode0/ecs-jenkins-terraform.git`
-2. RUN `./deploy`
+2. RUN `./deploy.sh`
 You will be prompted to provide the following:
 3. The name of AWS ECS cluster
    Enter a value: 
