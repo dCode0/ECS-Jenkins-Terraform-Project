@@ -62,9 +62,9 @@ resource "aws_launch_configuration" "launcher" {
 resource "aws_autoscaling_group" "asg" {
   name                      = "ecs-asg"
   launch_configuration      = aws_launch_configuration.launcher.name
-  min_size                  = 1
-  max_size                  = 1
-  desired_capacity          = 1
+  min_size                  = var.intance_min
+  max_size                  = var.intance_max
+  desired_capacity          = var.intance_min
   health_check_type         = "ELB"
   health_check_grace_period = 300
   vpc_zone_identifier       = module.vpc.public_subnets
