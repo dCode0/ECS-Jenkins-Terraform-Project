@@ -20,7 +20,7 @@ resource "aws_ecs_capacity_provider" "ecs_provider" {
   }
 }
 
-# update file container-def, so it's pulling image from ecr
+# update file container-def, so it's pulling the latest jenkins image
 resource "aws_ecs_task_definition" "ecs-task-definition" {
   family                = "jenkins-container-family"
   container_definitions = file("container-definitions/container-def.json")
